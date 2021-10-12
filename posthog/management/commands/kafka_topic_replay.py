@@ -18,4 +18,6 @@ class Command(BaseCommand):
         consumer = get_kafka_consumer(options["topic"])
 
         for message in consumer:
-            print(message.value)
+            val = message.value
+            if "017c6add-8adb-0000-c368-01bc30f33abb" in val:
+                print("partition: ", message.partition, message.value)

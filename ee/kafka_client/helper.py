@@ -127,7 +127,7 @@ def get_kafka_consumer(topic=None, value_deserializer=lambda v: v.decode("utf-8"
         security_protocol="SSL",
         ssl_context=get_kafka_ssl_context(),
         value_deserializer=value_deserializer,
-        group_id="yakko-test-0001",
+        group_id="yakko-test-0002",
         auto_offset_reset="earliest",
     )
 
